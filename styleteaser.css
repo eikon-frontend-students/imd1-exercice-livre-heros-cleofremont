@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Jersey+25&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+#imagedefond {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#img2 {
+  margin: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+div {
+  font-family: "jersey 25", serif;
+  max-width: 40%;
+  display: flex;
+  margin: auto;
+  background-color: #787f76;
+  flex-direction: column;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+
+a:hover {
+  color: #002fffbd;
+}

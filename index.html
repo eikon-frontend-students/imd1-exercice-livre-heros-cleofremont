@@ -3,11 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le livre dont vous êtes le héros</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Début du jeu</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- 🦊 Consigne 2: Remplacer le contenu du lien par votre teaser.  -->
-    <a href="projet">Mon projet</a>
+    <img src="imagedefond.jpg" alt="image de fond" id="imagedefond" />
+    <div id="container">
+      <div id="titre">
+        <h1>Bienvenue dans l'aventure !</h1>
+      </div>
+      <div id="content">
+        <p id="sous tire">
+          <strong>Est tu prêt à prendre le devant de l'histoire ?</strong>
+        </p>
+        <p id="paragraphe 1">
+          Dans ce jeu interactif, tu va pouvoir faire tes choix, non seulement
+          pour survire, mais aussi pour, peu etre élucider des mystères ...
+          <br />
+          <br />
+          Mais avant, choisi ton pseudo !
+        </p>
+        <br />
+        <input type="text" id="nom" placeholder="Tape ton nom ici" />
+
+        <button id="ok" onclick="validerNom()">OK</button>
+
+        <div id="bienvenue" style="display: none" class="div_caché">
+          <p>Bienvenue <span id="nomJoueur"></span> !</p>
+        </div>
+        <div id="erreurNom" style="display: none" class="div_caché">
+          <p>Tu dois choisir un nom !</p>
+        </div>
+
+        <a
+          href="/page1/indexP1.html"
+          id="commencerlejeu"
+          style="display: none"
+          onclick="essais()"
+        >
+          <p id="commencerlejeuText">Commencer Le Jeu !</p></a
+        >
+
+        <br />
+        <br />
+
+        <a class="teaserlink" href="/teaser.html"><h3>Teaser</h3></a>
+      </div>
+    </div>
   </body>
+  <script>
+    var ok = document.getElementById("ok");
+    var nom = document.getElementById("nom");
+    var bienvenue = document.getElementById("bienvenue");
+    var erreurNom = document.getElementById("erreurNom");
+    var commencerJeu = document.getElementById("commencerlejeu");
+    var nomJoueurSpan = document.getElementById("nomJoueur");
+    var nomJoueur = nom.value;
+    var nomstorage = nom.value.trim();
+    console.log("nom:" + nomstorage);
+
+    function essais() {
+      console.log("Tentative numéro : " + trycount);
+      document.getElementById("nombreEssais").textContent = trycount;
+      localStorage.setItem("nombreEssais", trycount);
+    }
+
+    function validerNom() {
+      nomJoueur = nom.value.trim();
+
+      if (nomJoueur.length > 0) {
+        localStorage.setItem("nom", nomJoueur);
+        commencerJeu.style.display = "block";
+        bienvenue.style.display = "block";
+        nomJoueurSpan.textContent = nomJoueur;
+        erreurNom.style.display = "none";
+      } else if (nomJoueur.length === 0) {
+        erreurNom.style.display = "block";
+
+        commencerJeu.style.display = "none";
+        bienvenue.style.display = "none";
+      }
+    }
+
+    nom.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        validerNom();
+      }
+    });
+  </script>
 </html>

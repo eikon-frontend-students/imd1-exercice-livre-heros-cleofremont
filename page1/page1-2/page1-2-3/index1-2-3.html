@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tu est parti ailleur</title>
+    <link rel="stylesheet" href="../../styleP1.css" />
+  </head>
+  <body>
+    <img src="../../../imagedefond.jpg" alt="image de fond" id="imagedefond" />
+
+    <div id="container">
+      <a href="/page1/indexP1.html" id="retour"
+        ><img id="retourimg" src="../../../left-arrow.png" alt="retour"
+      /></a>
+      <h1>Tu est partis ailleur</h1>
+      <p id="paragraphe1">
+        Tu choisis de ne pas écouter cet inconnu et tu te lèves pour t’éloigner.
+        Tu marches quelques mètres dans les allées du parc. Le soulagement
+        commence à te gagner… mais soudain, tu l’aperçois à nouveau. Il est déjà
+        assis sur un autre banc, comme s’il avait toujours été là. Impossible
+        qu’il t’ait doublé, et pourtant, il t’attend et te redis même cette
+        fameuse phrase :<i>"Bonjour <span id="getnom"></span>"</i>. Tu
+        frissonnes.
+        <br />
+        <br />
+        <strong>Que fais-tu ?</strong>
+      </p>
+      <br />
+      <ul>
+        <li>
+          <a href="/page1/page1-1/page1-1-1/indexP1-1-1.html" class="buttchoix"
+            >Tu décide de l'écouter</a
+          >
+        </li>
+        <li>
+          <a href="/page1/page1-1/page1-1-2/indexP1-1-2.html" class="buttchoix"
+            >Tu pars du parc, troublé</a
+          >
+        </li>
+        <li>
+          <a href="/page1/page1-2/indexP1-2.html" class="buttchoix"
+            >Tu l’ignores et reste silencieux</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    var nom = localStorage.getItem("nom");
+
+    var getnom = document.getElementById("getnom");
+    getnom.textContent = nom;
+  </script>
+</html>
