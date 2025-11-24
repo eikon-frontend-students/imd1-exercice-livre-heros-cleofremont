@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>le vieillard</title>
+    <link rel="stylesheet" href="styleP1.css" />
+  </head>
+  <body>
+    <img src="../imagedefond.jpg" alt="image de fond" id="imagedefond" />
+
+    <div id="container">
+      <a href="index.html" id="retour"
+        ><img id="retourimg" src="../../left-arrow.png" alt="retour"
+      /></a>
+      <h1>Début de l’histoire</h1>
+      <p id="paragraphe1">
+        Tu es assis sur un banc, dans un parc presque désert. Le vent est frais,
+        les arbres bruissent doucement. Soudain, un homme étrange — vieux, vêtu
+        d’un manteau usé — vient s’asseoir à côté de toi. Son regard est
+        perçant, et avant même que tu n’aies le temps de réagir, il te dis "
+        Bonjour,
+        <i><span id="getnom"></span></i>
+        ". Sa voix est rauque, mais étrangement captivante, et surtout, comment
+        connais il mon nom Rapidement, tu réalises qu’il en sait beaucoup trop
+        sur toi. Trop de détails personnels, trop de souvenirs intimes… Tu
+        ressens un profond malaise.
+        <br />
+        <br />
+        <strong>Que fais-tu ?</strong>
+      </p>
+      <br />
+      <ul>
+        <li>
+          <a href="/page1/page1-1/indexP1-1.html" class="buttchoix"
+            >Tu te lèves et tu pars plus loin dans le parc</a
+          >
+        </li>
+        <li>
+          <a href="/page1/page1-2/indexP1-2.html" class="buttchoix"
+            >Tu l’ignores et reste silencieux</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    var nom = localStorage.getItem("nom");
+
+    var getnom = document.getElementById("getnom");
+    getnom.textContent = nom;
+  </script>
+</html>

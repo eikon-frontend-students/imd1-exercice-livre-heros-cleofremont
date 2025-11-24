@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Jersey+25&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Jersey 25", serif;
+  min-height: 100vh;
+  min-width: 100vh;
+  justify-content: center;
+  display: flex;
+}
+#container {
+  max-width: 60%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 813px;
+  flex-shrink: 0;
+  background: #787f76;
+  padding: 36px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#imagedefond {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+h1 {
+  margin-top: 68px;
+  margin-left: 123px;
+  margin-bottom: 82px;
+  text-align: left;
+  font-size: 48px;
+}
+
+#paragraphe1 {
+  text-align: left;
+  margin-left: 123px;
+  margin-right: 89px;
+  font-size: 20px;
+}
+
+#retour {
+  margin-right: 4px;
+}
+
+#retour {
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+  color: #000000;
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  border-radius: 2px;
+  border: 1px solid #000;
+  background: #d9d9d9;
+}
+
+#retour:hover {
+  background-color: rgb(146, 144, 144);
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  color: white;
+}
+
+#retourimg {
+  text-align: left;
+  text-decoration: none;
+  width: 56px;
+  height: 56px;
+}
+
+ul {
+  margin: auto;
+  text-align: left;
+  margin-left: 123px;
+}
+
+li {
+  text-align: left;
+  font-size: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 0, 255, 0.408);
+  text-decoration: underline;
+  transition-duration: 0.2s;
+  margin-left: 3px;
+}
